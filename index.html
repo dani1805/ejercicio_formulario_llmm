@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Formularios</h1>
+    <section>
+        <form>
+            <fieldset>
+                <legend><strong>Datos personales</strong> </legend>
+                <div class="d-inline">
+                    <p>Nombre* <input type="text" name="nombre"></p>
+                    <p>Apellidos <input type="text" name="apellidos" placeholder="Los dos apellidos"></p>
+                </div>
+                <br>
+                <div class="d-inline">
+                    <p>Edad <input type="number" name="edad" placeholder="25"></p>
+                <p>Sexo
+                    <input type="radio" name="genero" value="Hombre"> Hombre
+                    <input type="radio" name="genero" value="Mujer" checked> Mujer
+                </p>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend><strong>Datos de contacto</strong></legend>
+                <div class="d-inline">
+                    <p>Email* <input type="text" name="email"></p>
+                    <p>Dirección <input type="text" name="dirección" placeholder="Calle, nº, ciudad, Provincia" class="direccion"></p>
+                </div>
+                <div class="d-inline">
+                    <p>Codigo postal <input type="text" name="codigo_postal"></p>
+                    <p>Ciudad <input type="text" name="ciudad" placeholder="Madrid"></p>
+                    <p>Provincia
+                        <select name="menu[]">
+                            <option value="1" selected>provincia</option>
+                            <option value="2" >Jaén</option>
+                            <option value="3">Huelva</option>
+                            <option value="4">Sevilla</option>
+                        </select>
+                    </p>
+                    <p>Clave  <input type="text" name="clave"></p>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend><strong>Datos de reserva</strong></legend>
+                <div class="d-inline">
+                    <p>Fecha<input type="datetime" name="fecha" value="23/01/2019"></p>
+                    <p><input type="time" name="hora" value="12:35"></p>
+                    <p>Habitación</p>
+                        <select name="menu[]">
+                        <option value="1" selected>Habitación individual,doble</option>
+                        <option value="2">Habitación doble</option>
+                        <option value="3">Habitación triple</option>
+                        <option value="4">Habitación con aseo privado</option>
+                      </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend><strong>Preferencias</strong></legend>
+                <div class="d-inline">
+                    <p>Frutos secos: 
+                        <select name="preferencias[]" size="5" multiple>
+                            <option value="1">Albaricoque</option>
+                            <option value="2" selected>Cerezas</option>
+                            <option value="3" selected>Fresas</option>
+                            <option value="4" selected>Melocotones</option>
+                            <option value="5">No lo sé</option>
+                        </select>
+                    </p>
+                    <p>Refrescos <input type="text"name="Refrescos" placeholder="12"></p>
+                </div>
+                <div>
+                    <p class="ingredientes">Ingredientes:</p> 
+                    <p class="d-inline">
+                        <input type="checkbox" id="Pimiento" name="Pimiento" value="Pimiento" checked>
+                        <label for="Pimiento"> Pimiento</label>
+                        <input type="checkbox" id="Champiñones" name="Champiñones" value="Champiñones">
+                        <label for="Champiñones"> Champiñones</label><br>
+                        <input type="checkbox" id="Extra queso" name="Extra queso" value="Extra queso">
+                        <label for="Extra queso"> Extra queso</label>
+                    </p>
+                </div>
+                <p>Color <input type="color" name="color" value="#A349A4"></p>
+                <p>Sugerencias</p>
+                <textarea name="texto" rows="5" cols="100" maxlength="80"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend><strong>Varios</strong></legend>
+                <div class="d-inline">
+                    <p>Fotos<input type="file" name="Elegir archivos" value="image/*"></p>
+                    <p>Curriculum PDF <input type="file" name="archivo"></p>
+                </div>
+                <fieldset>
+                    <div class="d-inline">
+                        <input class="mandar" type="submit" value="Mandar datos">
+                        <input class="borrar" type="submit" value="Borrar datos">
+                    </div>
+                    <div>
+                        <input type="button" value="Yo no hago nada">
+                    </div>
+                </fieldset>
+            </fieldset>
+        
+        </form>
+       
+    </section>
+   
+</body>
+</html>
